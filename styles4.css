@@ -1,0 +1,120 @@
+/* Estilos para la sección de Contacto */
+.contacto {
+    padding: 50px 20px;
+    background-color: #0E1010;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.contacto-titulo {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.contacto-descripcion {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #D1D1D1;
+    font-weight: 300;
+}
+
+.contacto-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon i {
+    font-size: 40px;
+    color: #FFFFFF;
+    transition: transform 0.3s ease;
+}
+
+.social-icon i:hover {
+    transform: scale(1.1);
+    color: #4CAF50;
+}
+
+/* Estilos para el pie de página */
+.footer {
+    background-color: black;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.footer-info p:first-child {
+    font-weight: bold;
+}
+
+/* Responsividad para pantallas pequeñas */
+
+@media (max-width: 768px) {
+    .contacto {
+        padding: 40px 15px;
+        /* Menos espacio en pantallas pequeñas */
+    }
+
+    .contacto-titulo {
+        font-size: 1.8rem;
+        /* Tamaño de fuente más pequeño */
+    }
+
+    .contacto-descripcion {
+        font-size: 1rem;
+        /* Tamaño de fuente más pequeño */
+    }
+
+    .contacto-social {
+        gap: 15px;
+        /* Reducir el espacio entre íconos */
+        flex-wrap: wrap;
+        /* Asegura que los íconos se acomoden en filas */
+        justify-content: center;
+        /* Centrar los íconos */
+    }
+
+    .social-icon i {
+        font-size: 30px;
+        /* Reducir tamaño de íconos */
+    }
+
+    .footer {
+        padding: 20px 15px;
+        /* Ajustar el padding */
+    }
+
+    .footer-info p {
+        font-size: 0.9rem;
+        /* Reducir tamaño de fuente */
+    }
+}
+
+@media (max-width: 480px) {
+    .contacto-titulo {
+        font-size: 1.5rem;
+        /* Ajustar aún más el tamaño de título */
+    }
+
+    .contacto-descripcion {
+        font-size: 0.9rem;
+        /* Reducir aún más el tamaño de la descripción */
+    }
+
+    .social-icon i {
+        font-size: 25px;
+        /* Reducir más los íconos en pantallas muy pequeñas */
+    }
+
+    .footer-info p {
+        font-size: 0.8rem;
+        /* Reducir tamaño de texto en el pie */
+    }
+}

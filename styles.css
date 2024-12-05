@@ -1,0 +1,260 @@
+/* styles.css */
+
+/* Cargar la fuente .otf usando @font-face */
+@font-face {
+    font-family: 'MaziusReview';
+    src: url('fonts/MaziusReview.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeutralFace';
+    src: url('fonts/NeutralFace.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Usar solo una fuente predeterminada general */
+}
+
+body {
+    background-color: #0E1010;
+    color: white;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 0;
+    padding: 80px 40px 50px 40px;
+    background-image: url('img/hero.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: left;
+    height: 653px;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-family: 'MaziusReview', sans-serif;
+    font-style: italic;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s forwards;
+}
+
+.hero p {
+    font-size: 24px;
+    font-weight: 300;
+    font-family: 'NeutralFace', sans-serif;
+    margin-top: 10px;
+    animation: fadeIn 1.5s forwards;
+    animation-delay: 0.5s;
+    /* Retrasar animación de párrafo */
+}
+
+.hero h2 {
+    font-size: 50px;
+    font-family: 'MaziusReview', sans-serif;
+    font-style: italic;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s forwards;
+}
+
+.cuadrado-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 900px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    font-size: 14px;
+    height: 260px;
+    background-color: rgba(3, 3, 3, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Cambiado de 'center' a 'flex-start' */
+    align-items: flex-start;
+    /* Cambiado de 'center' a 'flex-start' */
+    color: #f9f7f7;
+    text-align: left;
+    /* Cambiado de 'center' a 'left' */
+}
+
+/* Asegurarse de que los elementos de texto también estén alineados a la izquierda */
+.cuadrado-texto h2 {
+    font-size: 36px;
+    font-family: 'MaziusReview', sans-serif;
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-left: 0;
+    /* Asegúrate de que no haya margen izquierdo */
+}
+
+.cuadrado-texto p {
+    font-size: 14px;
+    font-family: 'NeutralFace', sans-serif;
+    font-weight: 400;
+    color: #fafafa;
+    margin-top: 10px;
+    margin-left: 0;
+    /* Asegúrate de que no haya margen izquierdo */
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Imagen del Sapo a la derecha */
+.sapo-image-right {
+    position: absolute;
+    top: 32.6%;
+    right: 0;
+    width: 35%;
+    height: 75%;
+    transform: translateX(-45%);
+    transform: translateY(-10%);
+    /* Ajuste menos agresivo */
+    z-index: 1;
+}
+
+.sapo-image-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 1024px) {
+    .hero {
+        height: 550px;
+        padding: 60px 30px 40px 30px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .sapo-image-right {
+        width: 40%;
+    }
+
+    /* Ajustes en el cuadro de texto */
+    .cuadrado-texto {
+        width: 80%;
+        font-size: 3vw;
+        /* Usar unidades relativas para que el tamaño se ajuste */
+        padding: 30px;
+    }
+
+    .cuadrado-texto h2 {
+        font-size: 4vw;
+        /* Tamaño dinámico para el título */
+    }
+
+    .cuadrado-texto p {
+        font-size: 2.5vw;
+        /* Ajuste de tamaño para el párrafo */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 450px;
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 10px;
+    }
+
+    .hero p {
+        font-size: 5px;
+    }
+
+    .sapo-image-right {
+        width: 50%;
+    }
+
+    /* Ajustes en el cuadro de texto */
+    .cuadrado-texto {
+        width: 55%;
+        left: 30%;
+        font-size: 4vw;
+        /* Ajuste más grande para pantallas medianas */
+        padding: 35px;
+    }
+
+    .cuadrado-texto h2 {
+        font-size: 4vw;
+    }
+
+    .cuadrado-texto p {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 350px;
+        padding: 20px 10px;
+    }
+
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .sapo-image-right {
+        width: 60%;
+    }
+
+    /* Ajustes en el cuadro de texto */
+    .cuadrado-texto {
+        width: 90%;
+        font-size: 5vw;
+        /* El texto aumenta proporcionalmente con el tamaño de la pantalla */
+        height: auto;
+        padding: 20px;
+    }
+
+    .cuadrado-texto h2 {
+        font-size: 6vw;
+        /* Títulos más grandes en pantallas pequeñas */
+    }
+
+    .cuadrado-texto p {
+        font-size: 4.5vw;
+        /* Párrafos más grandes en pantallas pequeñas */
+    }
+}

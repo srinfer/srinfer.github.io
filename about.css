@@ -1,0 +1,67 @@
+.sobre-mi-h2 {
+    font-size: 6vw;
+    /* Tamaño relativo que se ajusta con el ancho de la pantalla */
+    font-family: 'MaziusReview', sans-serif;
+    text-align: center;
+    padding: 3vw;
+    /* Padding relativo */
+    letter-spacing: 1px;
+    margin: 0;
+    /* Aseguramos que no haya margen extra que afecte el centrado */
+}
+
+/* Para pantallas más grandes */
+@media (min-width: 768px) {
+    .sobre-mi-h2 {
+        font-size: 40px;
+        /* Tamaño fijo */
+        padding: 30px;
+        /* Padding fijo */
+    }
+}
+
+.sobre-mi-p {
+    padding: 10px 5%;
+    /* Padding en los lados, relativo al tamaño de la pantalla */
+    font-size: 4vw;
+    /* Tamaño de fuente relativo */
+    font-family: 'NeutralFace', sans-serif;
+    text-align: center;
+    letter-spacing: 3px;
+    margin: 0 auto;
+    /* Centra el elemento de bloque */
+    max-width: 90%;
+    /* Límite del ancho del texto para pantallas pequeñas */
+    box-sizing: border-box;
+    /* Asegura que el padding no afecte el ancho */
+}
+
+/* Para pantallas más grandes */
+@media (min-width: 768px) {
+    .sobre-mi-p {
+        font-size: 13px;
+        /* Tamaño fijo */
+        padding: 10px 50px 50px 50px;
+        /* Padding fijo en pantallas grandes */
+        max-width: 80%;
+        /* Límite de ancho para pantallas grandes */
+    }
+}
+
+/* Para dispositivos muy pequeños (por ejemplo, móviles con pantallas pequeñas) */
+@media (max-width: 480px) {
+    .sobre-mi-h2 {
+        font-size: 8vw;
+        /* Ajustamos el tamaño para pantallas muy pequeñas */
+        padding: 5vw;
+        /* Padding relativo */
+    }
+
+    .sobre-mi-p {
+        font-size: 5vw;
+        /* Aumentamos el tamaño para que sea legible */
+        padding: 10px 5%;
+        /* Padding para pantallas pequeñas */
+        max-width: 90%;
+    }
+}

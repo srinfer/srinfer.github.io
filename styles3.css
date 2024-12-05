@@ -1,0 +1,164 @@
+/* Estilos para la sección de proyectos */
+.proyectos {
+    padding: 50px 20px;
+    background-color: #0E1010;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.proyectos-titulo {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+}
+
+/* Estilo para los items de los proyectos */
+.proyecto-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0E1010;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    padding: 10px;
+    /* Agregado para darle un poco de espacio */
+}
+
+.proyecto-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Imagen del proyecto */
+.proyecto-imagen {
+    display: flex;
+    justify-content: center;
+    /* Centra la imagen */
+    align-items: center;
+    /* Centra la imagen verticalmente */
+    width: 50%;
+    /* Ajustar según la necesidad */
+}
+
+.proyecto-imagen img {
+    width: 100%;
+    /* Asegura que la imagen ocupe el 100% del contenedor */
+    height: auto;
+    /* Mantiene la relación de aspecto */
+    object-fit: cover;
+    max-width: 600px;
+    /* Limita el tamaño máximo de la imagen */
+    max-height: 400px;
+    /* Limita la altura máxima de la imagen */
+}
+
+/* Texto del proyecto */
+.proyecto-texto {
+    padding: 20px;
+    width: 45%;
+    /* Ajustar según el espacio disponible */
+}
+
+.proyecto-texto h3 {
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.proyecto-texto p {
+    color: #D1D1D1;
+    margin-bottom: 15px;
+}
+
+.proyecto-enlace {
+    color: #4CAF50;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.proyecto-enlace:hover {
+    text-decoration: underline;
+}
+
+/* Alternar imagen y texto */
+.proyectos-contenido .proyecto-item:nth-child(odd) {
+    flex-direction: row;
+    /* Imagen a la izquierda, texto a la derecha */
+}
+
+.proyectos-contenido .proyecto-item:nth-child(even) {
+    flex-direction: row-reverse;
+    /* Imagen a la derecha, texto a la izquierda */
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 1024px) {
+    .proyectos {
+        padding: 40px 15px;
+    }
+
+    .proyectos-titulo {
+        font-size: 1.75rem;
+    }
+
+    .proyecto-item {
+        flex-direction: row;
+    }
+
+    .proyecto-texto {
+        width: 50%;
+    }
+
+    .proyecto-imagen img {
+        max-width: 100%;
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .proyectos {
+        padding: 30px 15px;
+    }
+
+    .proyectos-titulo {
+        font-size: 1.5rem;
+    }
+
+    .proyectos-contenido {
+        flex-direction: column;
+    }
+
+    .proyecto-item {
+        flex-direction: column;
+    }
+
+    .proyecto-texto {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .proyecto-imagen img {
+        max-width: 100%;
+        max-height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .proyectos-titulo {
+        font-size: 1.3rem;
+    }
+
+    .proyecto-texto h3 {
+        font-size: 1.5rem;
+    }
+
+    .proyecto-texto p {
+        font-size: 1rem;
+    }
+
+    .proyecto-imagen img {
+        max-height: 200px;
+    }
+}

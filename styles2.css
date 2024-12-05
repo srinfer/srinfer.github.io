@@ -1,0 +1,177 @@
+/* Estilos para la sección de Intereses */
+.intereses {
+    padding: 40px 0;
+    background-color: #0E1010;
+    color: #fff;
+    text-align: center;
+}
+
+.intereses h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.intereses-contenido {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Estilo de cada item de intereses */
+.interes-item {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    /* Asegura que el contenido no se desborde */
+    position: relative;
+    /* Necesario para el posicionamiento de los elementos */
+}
+
+.interes-item:hover {
+    transform: scale(1.2);
+    /* Agranda el item cuando se pasa el mouse */
+    z-index: 10;
+    /* Asegura que el item se muestre encima de los demás */
+}
+
+/* Imagen del item */
+.interes-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que la imagen ocupe todo el espacio */
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    /* Transición para el tamaño de la imagen */
+}
+
+.interes-item:hover .interes-imagen {
+    height: 100%;
+    /* Asegura que la imagen ocupe todo el espacio del item */
+}
+
+/* Título del item */
+.interes-item h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #fff;
+    word-wrap: break-word;
+    transition: font-size 0.3s ease-in-out;
+    /* Transición para el tamaño del texto */
+}
+
+.interes-item:hover h3 {
+    font-size: 1.3rem;
+    /* Aumentar el tamaño del título */
+}
+
+/* Descripción del item */
+.interes-item p {
+    font-size: 0.9rem;
+    color: #ccc;
+    flex-grow: 1;
+    margin: 0;
+    word-wrap: break-word;
+    transition: font-size 0.3s ease-in-out;
+    /* Transición para el texto */
+}
+
+.interes-item:hover p {
+    font-size: 1rem;
+    /* Aumentar el tamaño del texto */
+}
+
+/* Media Queries para hacerlo responsive */
+
+/* Para pantallas de tabletas (768px o menos) */
+@media (max-width: 768px) {
+    .intereses-contenido {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .interes-item {
+        height: 220px;
+        /* Ajustar altura */
+    }
+
+    .interes-imagen {
+        height: 90px;
+        /* Reducir el tamaño de las imágenes */
+    }
+
+    .interes-item h3 {
+        font-size: 1rem;
+    }
+
+    .interes-item p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Para pantallas pequeñas (480px o menos) */
+@media (max-width: 480px) {
+    .intereses-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .interes-item {
+        height: auto;
+    }
+
+    .interes-imagen {
+        height: 60px;
+    }
+
+    .interes-item h3 {
+        font-size: 0.9rem;
+    }
+
+    .interes-item p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Para pantallas de escritorio y más grandes */
+@media (min-width: 1024px) {
+    .intereses-contenido {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .interes-item {
+        height: 250px;
+        /* Mayor altura para escritorio */
+    }
+
+    .interes-imagen {
+        height: 150px;
+        /* Imagen más grande en escritorio */
+    }
+
+    .interes-item:hover .interes-imagen {
+        height: 100%;
+        /* Imagen sigue ocupando el 100% en el hover */
+    }
+
+    .interes-item h3 {
+        font-size: 1.2rem;
+        /* Ajuste del tamaño de fuente */
+    }
+
+    .interes-item p {
+        font-size: 1rem;
+        /* Ajuste del tamaño del texto */
+    }
+}
