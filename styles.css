@@ -270,6 +270,7 @@ body {
         width: 50%;
         height: 70%;
         left: 240px;
+        top: 142px;
     }
 
     /* Ajustes en el cuadro de texto */
@@ -277,13 +278,14 @@ body {
         width: 60%;
         font-size: 5vw;
         padding: -20px;
+        top: 210px
     }
 
     .cuadrado-texto h2 {
-        font-size: 6vw;
+        font-size: 3.5vw;
     }
 
     .cuadrado-texto p {
-        font-size: 3vw;
+        font-size: 2vw;
     }
 }
